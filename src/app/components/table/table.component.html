@@ -1,0 +1,58 @@
+<section id="section" class="container">
+	
+<section id="section2">
+	
+
+<table class="table table-dark">
+	<thead>
+		<tr>
+		<td >ID</td>
+		<td >Name (Job Title)</td>
+		<td >Age</td>
+		<td >User Name</td>
+		</tr>
+
+	</thead>
+	
+
+	<tbody>
+	<tr  *ngFor='let users of users'>
+		<td >
+				{{users.id}}
+		</td>
+		<td>
+				{{users.userName}}
+		</td>
+		<td>
+				{{users.age}}
+		</td>
+		<td>
+				{{users.jobTitle}}
+		</td>
+		
+	</tr>	
+	</tbody>
+</table>
+
+
+</section>
+	<br><br>
+
+	
+	<section class="form-group">
+<form #form='ngForm'>
+			<input  required placeholder="User Name" [(ngModel)]='newUser.userName' type="text" name="userName" class="form-control" > <br>
+			<input id="age" required placeholder="Age" [(ngModel)]='newUser.age' type="text" name="age" class="form-control" > <br>
+			<input id="job" required placeholder="Job Title" [(ngModel)]='newUser.jobTitle' type="text" name="jobTitle" class="form-control" > <br>
+
+	</form>
+</section>
+<input type="submit" value="Add user" class="btn btn-secondary" (click)='addUser();' [disabled]='!form.valid'>
+	
+ &nbsp;&nbsp;
+<input type="submit" value="Update user" class="btn btn-secondary" (click)='updateUserF();'>&nbsp;
+	
+<input type="submit" value="Delete user" id="buttonDELE" class="btn btn-secondary" (click)='deleteUser();'> &nbsp;
+<input type="text" id="userName" name="delete" [(ngModel)]='newUser.id' placeholder="ID to delete o update?">	
+</section>
+
