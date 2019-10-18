@@ -20,7 +20,7 @@ the Local server in Node JS uses the port 3700, if you have a problem with the r
 
 to run the server just go to the root folder of the project, open the terminal and run npm start , you must have Node JS installed into your PC to run this command. You will see the success message on the terminal 
 
-then go to the root folder of the Angular proyect /ManuelTest and run the command ng serve to run the Page of the Angular project (The Angular project will run fine without the Node server but it will not do the requests)
+then go to the root folder of the Angular proyect /(folder where you put the files) and run the command ng serve to run the Page of the Angular project (The Angular project will run fine without the Node server but it will not do the requests)
 
 if you have any question or any doub, feel free to call me 948871083
 
